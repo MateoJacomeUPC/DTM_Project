@@ -8,7 +8,7 @@ import numpy as np
 #### This is a deprecated script since the visualizations produced in it were improved in Part2.py
 ####
 
-# conn = psy.connect("host=dtim.essi.upc.edu port=5432 dbname=DBmateo.jacome user=mateo.jacome password=DMT2022!")
+# conn = psy.connect("host=dtim.essi.upc.edu port=5432 dbname=DBmateo.jacome user=mateo.jacome password=****PASSWORD****")
 # cur = conn.cursor()
 
 # Create table
