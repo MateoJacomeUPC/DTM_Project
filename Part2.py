@@ -288,7 +288,7 @@ fishing_plus["boat_trip"] = fishing_plus["boatname"] + "_" + fishing_plus["trip"
 fishing_plus["month"] = fishing_plus["date"].dt.to_period("M").astype("str")
 
 ### Loading tables to MobilityDB
-conn = psy.connect("host=dtim.essi.upc.edu port=5432 dbname=dbmateojacome user=mateo.jacome password=***REMOVED***")
+conn = psy.connect("host=dtim.essi.upc.edu port=5432 dbname=dbmateojacome user=mateo.jacome password=DMT2022!")
 cur = conn.cursor()
 
 # Load AIS_resampled to MobilityDB. Execution commented out because already created
@@ -320,7 +320,7 @@ def wkb_hexer(line):               # modified from Stackexchange
 ais_resampled['geometry'] = ais_resampled['geometry'].apply(wkb_hexer)
 fishing_plus['geometry'] = fishing_plus['geometry'].apply(wkb_hexer)
 # Create SQL connection engine
-engine = sal.create_engine('postgresql://mateo.jacome:***REMOVED***@dtim.essi.upc.edu:5432/dbmateojacome')
+engine = sal.create_engine('postgresql://mateo.jacome:DMT2022!@dtim.essi.upc.edu:5432/dbmateojacome')
 # Connect to database using a context manager
 with engine.connect() as conn, conn.begin():
     # Note use of regular Pandas `to_sql()` method.
